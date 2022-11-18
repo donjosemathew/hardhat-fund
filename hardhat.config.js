@@ -2,6 +2,7 @@ require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 require("@nomiclabs/hardhat-etherscan");
 require("./tasks/block-number");
+require("hardhat-gas-reporter");
 /** @type import('hardhat/config').HardhatUserConfig */
 const RINKBY_URL = process.env.RINKBY_RPC_URL;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
@@ -24,4 +25,9 @@ module.exports = {
   etherscan: {
     apiKey: ETHERSCAN,
   },
+  gasReporter: {
+    enabled: true,
+  },
 };
+
+///time 9.26
